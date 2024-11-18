@@ -9,6 +9,7 @@ class User(models.Model):
         ('adopter', 'Adopter'),
     ]
 
+    user_id = models.CharField(max_length=50, primary_key=True)
     user_type = models.CharField(max_length=20, choices=USER_TYPES)
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)

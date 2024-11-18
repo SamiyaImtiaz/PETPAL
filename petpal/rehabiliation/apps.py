@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class RehabilitationConfig(AppConfig):
+class RehabiliationConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = 'rehabilitation'
+    name = 'rehabiliation'

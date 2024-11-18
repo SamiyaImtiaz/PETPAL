@@ -7,6 +7,7 @@ class Store(models.Model):
         ('service', 'Service'),
     ]
 
+    store_id = models.CharField(max_length=50, primary_key=True)
     store_name = models.CharField(max_length=100)
     location = models.TextField()
     store_type = models.CharField(max_length=20, choices=STORE_TYPES)
@@ -17,6 +18,7 @@ class Store(models.Model):
 
 
 class Product(models.Model):
+    product_id = models.CharField(max_length=50, primary_key=True)
     product_name = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
     stock_status = models.BooleanField()
@@ -27,6 +29,7 @@ class Product(models.Model):
 
 
 class GroomingService(models.Model):
+    service_id = models.CharField(max_length=50, primary_key=True)
     service_name = models.CharField(max_length=100)
     pet_type = models.CharField(max_length=50)
     price = models.DecimalField(max_digits=10, decimal_places=2)
